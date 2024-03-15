@@ -1,6 +1,6 @@
 function machine_prefix()
 {
-    [ ! -z "$MACHINE_PREFIX" ] && echo -n "$fg_bold[blue]($MACHINE_PREFIX) "
+    [ ! -z "$MACHINE_PREFIX" ] && echo -n "%{$fg_bold[blue]%}($MACHINE_PREFIX)%{$reset_color%} "
 }
 
 PROMPT='$(machine_prefix)%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%}'
